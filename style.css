@@ -1,0 +1,401 @@
+/* Color Palette Variables */
+:root {
+  --ink: #1d2430;     /* body text           14.97:1 */
+  --paper: #fdfaf5;   /* page background             */
+  --panel: #f3ede4;   /* panels, zebra rows          */
+  --tea: #7a3e12;     /* headings             7.99:1 */
+  --accent: #b23a0e;  /* links, buttons       5.76:1 */
+  --muted: #5c6773;   /* secondary text       5.54:1 */
+  --line: #d6dce3;    /* hairlines only - never text */
+  --focus: #1c8a9c;
+  --plain: #c9dac9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Element Selector */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Element Selector by Group */
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.2;
+    color: var(--tea);
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+
+p, li {
+    max-width: 65ch;
+}
+
+a {
+    color: var(--accent);
+}
+
+:focus-visible{
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -4rem;
+    left: 1rem;
+    background: var(--accent);
+    padding: 0.75rem 1rem 1.25rem 1.50rem;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+/* Class Selector */
+.logo {
+    font-weight: 700;
+    color: var(--plain)
+}
+
+/* Descendent Selector */
+nav a {
+    font-weight: 700;
+}
+
+/* 1rem = 16px */
+.tagline {
+    color: var(--accent);
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+p {
+    color: var(--muted);
+}
+
+.role {
+    margin: 0;
+    color: var(--muted);
+}
+
+.talk {
+    font-style: italic;
+}
+
+.wrapper, main {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+main > section {
+    padding: 2rem 0;
+}
+
+.site-header {
+    background: var(--ink);
+    color: #fff;
+}
+
+.logo {
+    font-weight: 700;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
+
+.site-footer {
+    margin-top: 2rem;
+    background: var(--ink);
+    color: var(--plain);
+    padding: 1.5rem 0;
+}
+
+.site-footer a{
+    color: #fff;
+}
+
+.intro {
+    background: var(--panel);
+    margin: 1.5rem 0;
+    padding: 2rem 1.25rem;
+    border-radius: 1rem;
+
+}
+
+.intro h1 {
+    margin-top: 0;
+}
+
+.button {
+    display: inline-block;
+    background: var(--focus);
+    color: var(--ink);
+    padding: 1rem 1rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    font-weight: 700
+}
+
+.button:hover {
+    background: var(--ink);
+    color: var(--focus)
+
+}
+
+table {
+    width: 100%;
+    color: var(--paper);
+    border: 2px solid #000000;
+}
+
+caption {
+    padding: 0.5rem 0;
+    color: var(--ink);
+    font-weight: 650;
+    text-align: left;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px dashed var(--line);
+    background: var(--focus);
+}
+
+thead th {
+    border-bottom: 1px dashed var(--line);
+    background: var(--paper);
+    color: var(--focus);
+    font-weight: 750;
+}
+
+.site-header .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.speaker-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.speaker {
+    padding: 1.25rem;
+    text-align: center;
+    background: #fff;
+    border: 2px solid var(--focus);
+    border-radius: 5rem 0.5rem;
+}
+
+.speaker img {
+    width: 8rem;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.speaker h3 {
+    margin: 0.75rem 0 0.25rem;
+}
+
+form {
+    max-width: 36rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+/* attribute selector */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 649;
+    color: var(--focus);
+    background: var(--paper);
+    border: 2px solid var(--focus);
+    border-radius: .5rem;
+}
+
+fieldset {
+    margin: 0 0 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--focus);
+    border-radius: 0.5rem;
+}
+
+legend {
+    padding: 0 0.25rem;
+    font-weight: 700; 
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.25rem 0;
+}
+
+.choice {
+    margin: 0;
+    font-weight: 400;
+}
+
+input[type="radio"] {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+}
+
+.fill-form {
+    color: var(--ink);
+}
+
+button{
+    width: 100%;
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--focus);
+    color: var(--ink);
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--ink);
+    color: #1c8a9c;
+}
+
+@media (min-width: 48em) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .intro {
+        padding: 3rem;
+    }
+
+    .speaker-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    button {
+        width: auto;
+    }
+}
+
+@media (min-width: 64em) {
+    .speaker-grid {
+        grid-template-columns: repeat (4, 1fr);
+    }
+}
+
+.countdown {
+    font-weight: 700;
+    color: #1c8a9c;
+}
+
+.schedule-summary {
+    color: var(--muted);
+}
+
+.nav-toggle {
+    display: none;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    font: inherit;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.js .nav-toggle {
+  display: block;
+}
+
+.js nav {
+  display: none;
+  width: 100%;              /* a row of its own under the logo */
+}
+
+.js nav.is-open {
+  display: block;
+}
+
+.js nav ul {
+  flex-direction: column;
+}
+
+@media (min-width: 48em) {
+  .js .nav-toggle {
+    display: none;
+  }
+
+  .js nav {
+    display: block;
+    width: auto;
+  }
+
+  .js nav ul {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Code &amp; Tea 2026 - A One-Day Web Meetup in Lalitpur</title>
+    <meta
+      name="description"
+      content="Code and Tea is a free one-day meetup for student web developers in Lalitpur: four talks, one workshop and a lot of tea."
+    />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="wrapper">
+          <p class="logo">Code &amp; Tea</p>
+
+          <button class="nav-toggle" type="button" aria-expanded="false"
+                    aria-controls="primary-nav">
+            Menu
+          </button>
+
+          <nav aria-label="Primary" id="primary-nav">
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#speakers">Speakers</a></li>
+              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#register">Register</a></li>
+            </ul>
+          </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="intro" class="intro" aria-labelledby="intro-title">
+        <h1 id="intro-title">Code &amp; Tea 2026</h1>
+        <p class="tagline">A free one-day meetup for student web developers.</p>
+        <p>
+          <time datetime="2026-10-14">Wednesday 14 October 2026</time> &middot;
+          Patan Innovation Hall, Lalitpur
+        </p>
+        <p class="countdown"></p>
+        <p><a href="#register" class="button">Reserve your free seat</a></p>
+      </section>
+
+      <section id="about">
+        <h2>About the day</h2>
+
+        <img
+          src="images/venue.svg"
+          alt="Illustration of the main hall laid out with rows of seats facing a stage and a large screen"
+          width="1200"
+          height="600"
+        />
+
+        <p>
+          Code &amp; Tea started as six students sharing one laptop charger in a
+          library. It is now a day of short talks and one hands-on workshop,
+          run by students for students, with tea every ninety minutes.
+        </p>
+
+        <p>
+          Every talk is aimed at someone who has built their first page and
+          wants to build a better second one. No talk assumes a framework.
+        </p>
+
+        <h3>What you get</h3>
+        <ul>
+          <li>Four twenty-minute talks from working developers</li>
+          <li>A ninety-minute workshop: deploy a site before lunch</li>
+          <li>Lunch, and more tea than is strictly sensible</li>
+          <li>A certificate of attendance</li>
+        </ul>
+      </section>
+
+      <section id="speakers">
+        <h2>Speakers</h2>
+        <div class="speaker-grid">
+            <article class="speaker">
+              <img src="images/speaker-anjali.svg" alt="" width="240" height="240" />
+              <h3>Anjali Shrestha</h3>
+              <p class="role">Front-end engineer</p>
+              <p class="talk">Forms people actually finish</p>
+            </article>
+
+            <article class="speaker">
+              <img src="images/speaker-bikash.svg" alt="" width="240" height="240" />
+              <h3>Bikash Tamang</h3>
+              <p class="role">Web developer and teacher</p>
+              <p class="talk">Shipping a static site for free</p>
+            </article>
+
+            <article class="speaker">
+              <img src="images/speaker-priya.svg" alt="" width="240" height="240" />
+              <h3>Priya Karki</h3>
+              <p class="role">Product designer</p>
+              <p class="talk">Colour, contrast and your brand</p>
+            </article>
+
+            <article class="speaker">
+              <img src="images/speaker-suman.svg" alt="" width="240" height="240" />
+              <h3>Suman Rai</h3>
+              <p class="role">Accessibility specialist</p>
+              <p class="talk">Testing with a keyboard and a screen reader</p>
+            </article>
+        </div>
+      </section>
+
+      <section id="schedule">
+        <h2>Schedule</h2>
+
+        <table>
+          <caption>
+            Saturday 14 November 2026
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Session</th>
+              <th scope="col">Speaker</th>
+            </tr>
+          </thead>
+          <tbody class="schedule-body">
+            
+          </tbody>
+        </table>
+        <p class="schedule-summary"></p>
+      </section>
+
+      <section id="register">
+        <h2>Register</h2>
+        <p>Seats are free but limited to 120. Fields marked required must be filled in.</p>
+
+        <form action="#" method="post">
+          <p>
+            <label for="full-name">Full name (required)</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              autocomplete="name"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="email">Email (required)</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="phone">Mobile number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" />
+          </p>
+
+          <fieldset>
+            <legend>Ticket type</legend>
+            <p class="choice">
+              <input type="radio" id="ticket-student" name="ticket" value="student" checked />
+              <label for="ticket-student">Student</label>
+            </p>
+            <p class="choice">
+              <input type="radio" id="ticket-other" name="ticket" value="other" />
+              <label for="ticket-other">Not currently a student</label>
+            </p>
+          </fieldset>
+
+          <p>
+            <label for="college">College or organisation</label>
+            <input
+              type="text"
+              id="college"
+              name="college"
+              autocomplete="organization"
+            />
+          </p>
+
+          <p>
+            <label for="needs">Access or dietary needs</label>
+            <textarea id="needs" name="needs" rows="4"></textarea>
+          </p>
+
+          <p>
+            <button type="submit">Reserve my seat</button>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p>
+            Code &amp; Tea is run by volunteers. Questions:
+            <a href="mailto:hello@codeandtea.example">hello@codeandtea.example</a>
+          </p>
+          <p>&copy; <span class="year">2025</span> Code &amp; Tea. A fictional event for CSE 230.</p>
+      </div>
+    </footer>
+  </body>
+</html>
